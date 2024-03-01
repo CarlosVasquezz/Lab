@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Café con leche",
+      "category": "bebida-caliente",
+      "description": "Un clásico café con leche, perfecto para empezar el día.",
+      "image": "https://example.com/cafe-con-leche.jpg",
+      "price": 3
+    },
+    {
+      "id": 2,
+      "name": "Latte",
+      "category": "bebida-caliente",
+      "description": "Café cremoso con leche espumada.",
+      "image": "https://example.com/latte.jpg",
+      "price": 3.5
+    },
+    {
+      "id": 3,
+      "name": "Capuccino",
+      "category": "bebida-caliente",
+      "description": "Espresso con leche y espuma de leche en partes iguales.",
+      "image": "https://example.com/cappuccino.jpg",
+      "price": 3.8
+    },
+    {
+      "id": 4,
+      "name": "Americano",
+      "category": "bebida-caliente",
+      "description": "Espresso diluido con agua caliente.",
+      "image": "https://example.com/americano.jpg",
+      "price": 3.2
+    },
+    {
+      "id": 5,
+      "name": "Frappuccino",
+      "category": "bebida-fria",
+      "description": "Café helado, cremoso y refrescante.",
+      "image": "https://example.com/frappuccino.jpg",
+      "price": 4
+    },
+    {
+      "id": 6,
+      "name": "Cold Brew",
+      "category": "bebida-fria",
+      "description": "Café preparado en agua fría, con un sabor más suave y menos ácido.",
+      "image": "https://example.com/cold-brew.jpg",
+      "price": 4.2
+    },
+    {
+      "id": 7, "name": "Té verde", "category": "te", 
+      "description": "Té verde natural con un sabor refrescante y ligero.",
+      "image": "https://example.com/te-verde.jpg",
+      "price": 2.5
+    },
+    {
+      "id": 8, "name": "Té negro", "category": "te", 
+      "description": "Té negro clásico con un sabor fuerte y aromático.",
+      "image": "https://example.com/te-negro.jpg",
+      "price": 2.7
+    },
+    {
+      "id": 9, "name": "Pastel de chocolate", "category": "postres-cafe", 
+      "description": "Delicioso pastel de chocolate con un toque de café.",
+      "image": "https://example.com/pastel-chocolate.jpg",
+      "price": 5
+    },
+    {
+      "id": 10, "name": "Brownie", "category": "postres-cafe", 
+      "description": "Clásico brownie con nueces y un ligero sabor a café.",
+      "image": "https://example.com/brownie.jpg",
+      "price": 4.5
+    }
+  ]
+  
