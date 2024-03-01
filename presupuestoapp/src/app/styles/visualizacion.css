@@ -67,7 +67,7 @@ body {
   padding: 8px;
   border: 1px solid #b0bec5;
   border-radius: 5px;
-  font-size: 12px; /* Ajustado: Tamaño de fuente reducido */
+  font-size: 12px; 
 }
 
 .formulario button {
@@ -77,7 +77,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 12px; /* Ajustado: Tamaño de fuente reducido */
+  font-size: 12px; 
 }
 
 .formulario button:hover {

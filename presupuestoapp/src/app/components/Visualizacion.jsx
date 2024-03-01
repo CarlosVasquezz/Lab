@@ -34,12 +34,12 @@ export default function Visualizacion() {
       setTotal(total + movimiento.monto);
     }
 
-    // Limpiar formulario
+
     event.target.reset();
   };
 
   const handleMovimientoChange = (event) => {
-    // Actualizar categorías relacionadas al movimiento seleccionado
+
     if (event.target.value === "ingreso") {
       setCategoriasIngresos([
         "Salario",
@@ -50,7 +50,7 @@ export default function Visualizacion() {
         "Otros ingresos",
       ]);
     } else {
-      // Otras categorías para gastos
+
       setCategoriasIngresos(["Alimentación", "Transporte", "Entretenimiento", "Otros"]);
     }
   };
