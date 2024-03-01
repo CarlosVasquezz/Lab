@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/page",{
+
+/***/ "(app-pages-browser)/./src/app/productos.json":
+/*!********************************!*\
+  !*** ./src/app/productos.json ***!
+  \********************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = JSON.parse('[{"id":1,"nombre":"Café Frío Especial","categoria":"Bebida fría","precio":4.5,"imagen":"https://assets.delirec.com/images%2FS6obyY5RRVPYBG3PAdsvII1ko7l2%2Frecipe%2F193cfe7d-a550-494f-85cd-59f6015bf9ee-Caf%C3%A9-gelado--gallery-0"},{"id":2,"nombre":"Café Americano","categoria":"Bebida caliente","precio":3,"imagen":"https://i.blogs.es/139e0f/cafe-americano2/450_1000.jpeg"},{"id":3,"nombre":"Brownie de Café","categoria":"Postres de café","precio":5.5,"imagen":"https://www.recetasjudias.com/wp-content/uploads/2018/05/Brownies-de-cafe-turco.jpg"},{"id":4,"nombre":"Té de Manzanilla","categoria":"Té","precio":2.5,"imagen":"https://d1kxxrc2vqy8oa.cloudfront.net/wp-content/uploads/2019/07/10085232/RFB-0507-5-tedemanzanilla.jpg"},{"id":5,"nombre":"Sandwich de Pollo","categoria":"Sandwiches","precio":6,"imagen":"https://gbprodstorage.blob.core.windows.net/files/recipes/1540180568258eeee33c3e106590588bd1b71a2b5a.jpg"},{"id":6,"nombre":"Frappe de Vainilla","categoria":"Bebida fría","precio":4.75,"imagen":"https://i.pinimg.com/originals/f5/42/46/f542466910838d1591f2c025d815c780.jpg"},{"id":7,"nombre":"Café Latte","categoria":"Bebida caliente","precio":3.5,"imagen":"https://cdn2.cocinadelirante.com/sites/default/files/images/2021/07/como-hacer-cafe-latte-con-canela.jpg"},{"id":8,"nombre":"Cheesecake de Café","categoria":"Postres de café","precio":6.5,"imagen":"https://www.tictacyummy.com/wp-content/uploads/2020/04/PortadaWeb-12.jpg"},{"id":9,"nombre":"Té Verde Matcha","categoria":"Té","precio":3,"imagen":"https://www.casapia.com/blog/wp-content/uploads/2019/05/t%C3%A9-verde-te-matcha-que-es-cuales-son-sus-beneficios-en-casa-pia-herbolario-online-tes.jpg"},{"id":10,"nombre":"Sandwich Vegano","categoria":"Sandwiches","precio":5.5,"imagen":"https://recetasveganas.net/wp-content/uploads/2020/01/sandwich-garbanzo-picadillo-vegano-sin-carne-recetas.jpg"}]');
+
+/***/ })
+
+});

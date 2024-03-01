@@ -1,0 +1,145 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/styles/cafeHimalaya.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+/* Estilos para el contenedor principal */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Estilos para la sección izquierda (Detalles de Compra) */
+.izquierda {
+  width: 30%;
+  padding-right: 20px;
+}
+
+.carrito {
+  background-color: #fffaeb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h3 {
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.item-carrito {
+  margin-bottom: 10px;
+}
+
+.item-carrito p {
+  margin: 0;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.item-carrito button {
+  background-color: #967c52;
+  color: #ffffff;
+  border: none;
+  padding: 3px 5px; /* Ajustado para separar más los botones */
+  margin-right: 5px; /* Ajustado para separar más los botones */
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.total {
+  margin-top: 20px;
+}
+
+.total h4 {
+  margin: 0;
+  color: #000000;
+}
+
+/* Estilos para la sección derecha (Productos) */
+.derecha {
+  width: 70%;
+  padding-left: 20px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.producto {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 150px; /* Altura fija para todas las imágenes */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.producto h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.producto p {
+  margin: 0;
+  color: #000000;
+}
+
+.producto button {
+  background-color: #967c52;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producto button:hover {
+  background-color: #bcebdf;
+}
+
+/* Estilos para el header */
+header {
+  background-color: #bcebdf;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilos Generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0d8;
+  color: #000000;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/styles/mypage.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white; 
+  color: #333; 
+}
+
+.title{
+  color: #007bff; 
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+}
