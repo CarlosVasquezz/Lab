@@ -1,76 +1,159 @@
-import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Chart from 'chart.js';
+"use client";
+import React, { useState } from "react";
+import "../styles/visualizacion.css";
 
-const useStyles = makeStyles({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  paper: {
-    width: '50%',
-    padding: '20px',
-  },
-  chart: {
-    width: '400px',
-    height: '400px',
-  },
-});
-
-const Visualización = () => {
-  const classes = useStyles();
+export default function Visualizacion() {
   const [gastos, setGastos] = useState([]);
   const [ingresos, setIngresos] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [categoriasIngresos, setCategoriasIngresos] = useState([
+    "Salario",
+    "Bonificaciones",
+    "Ventas",
+    "Regalías",
+    "Inversiones",
+    "Otros ingresos",
+  ]);
 
-  useEffect(() => {
-    // Obtener los datos de la base de datos
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-    setGastos([]);
-    setIngresos([]);
-  }, []);
+    const movimiento = {
+      movimiento: event.target.tipo.value,
+      categoria: event.target.categoria.value,
+      monto: parseFloat(event.target.monto.value),
+      fecha: event.target.fecha.value,
+      descripcion: event.target.descripcion.value,
+    };
 
-  useEffect(() => {
-    // Crear el gráfico
-    const ctx = document.getElementById('chart').getContext('2d');
-    const chart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-        datasets: [
-          {
-            label: 'Gastos',
-            data: gastos,
-            borderColor: 'red',
-          },
-          {
-            label: 'Ingresos',
-            data: ingresos,
-            borderColor: 'green',
-          },
-        ],
-      },
-    });
-  }, [gastos, ingresos]);
+    if (movimiento.movimiento === "gasto") {
+      setGastos([...gastos, movimiento]);
+      setTotal(total - movimiento.monto);
+    } else {
+      setIngresos([...ingresos, movimiento]);
+      setTotal(total + movimiento.monto);
+    }
+
+    // Limpiar formulario
+    event.target.reset();
+  };
+
+  const handleMovimientoChange = (event) => {
+    // Actualizar categorías relacionadas al movimiento seleccionado
+    if (event.target.value === "ingreso") {
+      setCategoriasIngresos([
+        "Salario",
+        "Bonificaciones",
+        "Ventas",
+        "Regalías",
+        "Inversiones",
+        "Otros ingresos",
+      ]);
+    } else {
+      // Otras categorías para gastos
+      setCategoriasIngresos(["Alimentación", "Transporte", "Entretenimiento", "Otros"]);
+    }
+  };
 
   return (
-    <div className={classes.root}>
-      <h2>Visualización de Gastos e Ingresos</h2>
-      <Paper className={classes.paper}>
-        <Typography variant="h6">Resumen Mensual</Typography>
-        <div>
-          <p>Total de Gastos: </p>
-          <p>Total de Ingresos: </p>
-          <p>Saldo Neto: </p>
+    <div className="container">
+      <div className="izquierda">
+        <div className="izquierda-superior">
+          <h2>Gastos</h2>
+          <div className="container-table">
+            <table className="transactions-table">
+              <thead>
+                <tr>
+                  <th>GASTOS</th>
+                  <th>Categoría</th>
+                  <th>Monto</th>
+                  <th>Fecha</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {gastos.map((movimiento, index) => (
+                  <tr key={index}>
+                    <td>Gasto</td>
+                    <td>{movimiento.categoria}</td>
+                    <td>${movimiento.monto.toFixed(2)}</td>
+                    <td>{movimiento.fecha}</td>
+                    <td>{movimiento.descripcion}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div className={classes.chart}>
-          <canvas id="chart"></canvas>
+
+        <div className="izquierda-inferior">
+          <h2>Ingresos</h2>
+          <div className="container-table">
+            <table className="transactions-table">
+              <thead>
+                <tr>
+                  <th>INGRESOS</th>
+                  <th>Categoría</th>
+                  <th>Monto</th>
+                  <th>Fecha</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ingresos.map((movimiento, index) => (
+                  <tr key={index}>
+                    <td>Ingreso</td>
+                    <td>{movimiento.categoria}</td>
+                    <td>${movimiento.monto.toFixed(2)}</td>
+                    <td>{movimiento.fecha}</td>
+                    <td>{movimiento.descripcion}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </Paper>
+      </div>
+
+      <div className="derecha">
+        <h2>Total ${total.toFixed(2)}</h2>
+        <form className="formulario" onSubmit={handleSubmit}>
+          <label htmlFor="tipo">Movimiento:</label>
+          <select id="tipo" name="tipo" onChange={handleMovimientoChange} required>
+            <option value="">Seleccione...</option>
+            <option value="gasto">Gasto</option>
+            <option value="ingreso">Ingreso</option>
+          </select>
+
+          <label htmlFor="categoria">Categoría:</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Seleccione...</option>
+            {categoriasIngresos.map((categoria, index) => (
+              <option key={index} value={categoria}>
+                {categoria}
+              </option>
+            ))}
+          </select>
+
+          <label htmlFor="monto">Monto:</label>
+          <input
+            type="number"
+            id="monto"
+            name="monto"
+            min="0.01"
+            step="0.01"
+            required
+          />
+
+          <label htmlFor="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required />
+
+          <label htmlFor="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="descripcion" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
     </div>
   );
-};
-
-export default Visualizacion;
+}
